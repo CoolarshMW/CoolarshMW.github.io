@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import ProjectTile from '../components/ProjectTile.astro';
+import { profile, projects, skills, timeline } from '../data/profile';
+---
+<Base
+  title={`${profile.name} — Business & Data Analyst`}
+  description="Harsh Wangikar, Business and Data Analyst. Master of Business Analytics, UTS Sydney. Projects in machine learning, dashboards and business analysis."
+>
+  <nav class="nav" aria-label="Main">
+    <div class="wrap">
+      <a class="brand" href="#top">{profile.name}</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="hide-sm"><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top">
+    <Hero />
+
+    <section id="work">
+      <div class="wrap section-head">
+        <h2>Selected work</h2>
+        <p>Machine learning, BI and business analysis, built on real data.</p>
+      </div>
+      <div class="tiles">
+        {projects.map((p) => <ProjectTile project={p} />)}
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap section-head"><h2>About</h2></div>
+      <div class="wrap about-grid">
+        <p class="big">
+          I trained as a computer engineer in Pune, then moved to Sydney for a Master of Business Analytics.{' '}
+          <span>I like the moment a messy dataset turns into something a manager can act on, and I care about checking the data before trusting the model.</span>
+        </p>
+        <div class="skills">
+          {skills.map((s) => (
+            <div><h4>{s.group}</h4><p>{s.items}</p></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap section-head"><h2>Experience and education</h2></div>
+      <div class="wrap">
+        <div class="timeline">
+          {timeline.map((t) => (
+            <div class="tl-item">
+              <span class="when">{t.when}</span>
+              <div>
+                <h4>{t.title}</h4>
+                <p class="org">{t.org}</p>
+                {t.note && <p class="note">{t.note}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>Let's talk about your data.</h2>
+        <p>{profile.availability}</p>
+        <div class="cta">
+          <a class="btn btn-primary" href={`mailto:${profile.email}`}>Email me</a>
+          <a class="btn btn-ghost" href={profile.linkedin}>LinkedIn</a>
+        </div>
+        <p class="details">{profile.email}<br /><a href={profile.github}>github.com/CoolarshMW</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© {new Date().getFullYear()} {profile.name}, Sydney</footer>
+</Base>

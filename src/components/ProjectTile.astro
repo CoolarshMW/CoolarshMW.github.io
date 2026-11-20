@@ -1,0 +1,38 @@
+---
+import type { Project } from '../data/profile';
+
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+const cls = project.variant === 'wide-dark' ? 'tile wide dark' : 'tile';
+---
+<article class={cls}>
+  <h3>{project.title}</h3>
+  <p class="sub">{project.summary}</p>
+  {project.links && (
+    <div class="links">
+      {project.links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </div>
+  )}
+  {project.bars ? (
+    <div class="figure bars" aria-label="Key figures">
+      {project.bars.map((b) => (
+        <div class="row">
+          <span>{b.label}</span>
+          <div class="track"><div class="fill" style={`width:${b.value}%`}></div></div>
+          <span class="val">{b.display}</span>
+        </div>
+      ))}
+      <div class="tags" style="justify-content:flex-start">
+        {project.tags.map((t) => <span>{t}</span>)}
+      </div>
+    </div>
+  ) : (
+    <div class="figure">
+      {project.metric && <div class="metric">{project.metric}</div>}
+      {project.metricNote && <p class="metric-note">{project.metricNote}</p>}
+      <div class="tags">{project.tags.map((t) => <span>{t}</span>)}</div>
+    </div>
+  )}
+</article>

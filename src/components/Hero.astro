@@ -1,0 +1,32 @@
+---
+import { profile } from '../data/profile';
+---
+<header class="hero">
+  <div class="wrap">
+    <p class="name">{profile.name}</p>
+    <h1>{profile.headline}</h1>
+    <p class="lede">{profile.lede}</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#work">See my work</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+    <figure class="hero-chart" aria-label="Illustration of rainfall rising to a peak on 26 July 2005 in Mumbai">
+      <svg viewBox="0 0 880 200" role="img" aria-hidden="true">
+        <line x1="0" y1="180" x2="880" y2="180" stroke="#d2d2d7" stroke-width="1"></line>
+        <path
+          class="draw"
+          d="M0,174 L70,170 L140,172 L210,163 L280,166 L350,150 L420,138 L490,96 L540,22 L590,104 L660,140 L730,158 L800,164 L880,168"
+          fill="none"
+          stroke="#1d1d1f"
+          stroke-width="3"
+          stroke-linejoin="round"
+          stroke-linecap="round"></path>
+        <g class="spike">
+          <circle cx="540" cy="22" r="7" fill="#0066cc"></circle>
+          <text x="556" y="28" font-size="15" fill="#1d1d1f" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-weight="600">26 July 2005: model flood risk 0.54</text>
+        </g>
+      </svg>
+      <figcaption>Illustration: the 2005 Mumbai deluge, a day my flood model had never seen. It still flagged the risk.</figcaption>
+    </figure>
+  </div>
+</header>
