@@ -86,12 +86,6 @@ export const skills = [
 export const timeline = [
   { when: '2025 – 2026', title: 'Master of Business Analytics (Extension)', org: 'University of Technology Sydney' },
   {
-    when: '2026 – now',
-    title: 'Team Member',
-    org: 'Coles Group, Sydney',
-    note: 'Customer service and store operations in a high-volume supermarket.',
-  },
-  {
     when: '2021 – 2024',
     title: 'Bachelor of Technology, Computer Engineering',
     org: 'Pimpri Chinchwad College of Engineering, Pune, CGPA 8.54',
