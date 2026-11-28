@@ -1,4 +1,4 @@
-# harshwangikar.github.io
+# harshwangikar.com
 
 Personal portfolio of **Harsh Wangikar**, Business & Data Analyst.
 
