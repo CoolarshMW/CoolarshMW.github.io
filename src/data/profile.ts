@@ -6,7 +6,7 @@ export const profile = {
   lede: 'Business and data analyst with a Master of Business Analytics from UTS Sydney. I build models, dashboards and plain-English answers.',
   email: 'harshwangikar14@gmail.com',
   linkedin: 'https://www.linkedin.com/in/harshwangikar',
-  github: 'https://github.com/CoolarshMW',
+  github: 'https://github.com/harshwangikar',
   availability:
     'Open to business analyst and data analyst roles in Australia and India from January 2027. Full Australian work rights.',
 };
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     metric: '0.90',
     metricNote: 'ROC-AUC on held-out test data with a Random Forest, ahead of logistic regression and XGBoost',
     tags: ['Python', 'scikit-learn', 'XGBoost', 'Cost-based thresholds'],
-    links: [{ label: 'View the code', href: 'https://github.com/CoolarshMW/flood-risk-prediction-mumbai-pune' }],
+    links: [{ label: 'View the code', href: 'https://github.com/harshwangikar/flood-risk-prediction-mumbai-pune' }],
     variant: 'wide-dark',
   },
   {
