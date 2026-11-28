@@ -8,7 +8,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/harshwangikar',
   github: 'https://github.com/harshwangikar',
   availability:
-    'Open to business analyst and data analyst roles in Australia and India from January 2027. Full Australian work rights.',
+    'Open to business analyst and data analyst roles in Australia and India. Full working rights in Australia.',
 };
 
 export type Bar = { label: string; value: number; display: string };
@@ -42,6 +42,7 @@ export const projects: Project[] = [
     metric: '150k',
     metricNote: 'employee records across work, wellbeing and lifestyle factors, in a team of six',
     tags: ['Python', 'Classification', 'HR analytics'],
+    links: [{ label: 'View the code', href: 'https://github.com/harshwangikar/employee-burnout-prediction' }],
   },
   {
     title: 'Retail scorecard that management can read',
@@ -53,6 +54,7 @@ export const projects: Project[] = [
       { label: 'Repeat customers', value: 99, display: '99%' },
     ],
     tags: ['Tableau', 'Excel', 'KPI design'],
+    links: [{ label: 'View the project', href: 'https://github.com/harshwangikar/retail-kpi-balanced-scorecard' }],
   },
   {
     title: 'ASX 100 long-short portfolio',
@@ -61,6 +63,7 @@ export const projects: Project[] = [
     metric: '18',
     metricNote: 'weighting set-ups tested, in a team of three',
     tags: ['Python', 'Excel', 'Quant finance'],
+    links: [{ label: 'View the code', href: 'https://github.com/harshwangikar/asx100-long-short-portfolio' }],
   },
   {
     title: 'Where should AI data centres go?',
@@ -84,22 +87,31 @@ export const skills = [
 ];
 
 export const timeline = [
-  { when: '2025 – 2026', title: 'Master of Business Analytics (Extension)', org: 'University of Technology Sydney' },
+  { when: '2025 – 2026', title: 'Master of Business Analytics (Extension)', country: 'Australia', org: 'University of Technology Sydney' },
   {
     when: '2021 – 2024',
     title: 'Bachelor of Technology, Computer Engineering',
+    country: 'India',
     org: 'Pimpri Chinchwad College of Engineering, Pune, CGPA 8.54',
     note: 'Final-year License Plate OCR project sponsored by Coriolis.',
   },
   {
     when: '2022',
     title: 'Data Analytics Intern',
+    country: 'India',
     org: 'UpSkillz',
     note: 'Exploratory analysis in Python and SQL, Tableau dashboards on customer engagement.',
   },
   {
     when: '2022',
     title: 'Published: A Review on Real-Time Traffic Sign Recognition with Voice Warnings',
-    org: 'MAT Journals',
+    org: 'MAT Journals, Vol. 1, Issue 3, co-author',
+    note: 'Cited in Scientific Reports (Nature Portfolio), 2026.',
+  },
+  {
+    when: '2018 – 2021',
+    title: 'Diploma in Information Technology',
+    country: 'India',
+    org: "SVERI's College of Engineering (Polytechnic), Pandharpur, 96.75%",
   },
 ];

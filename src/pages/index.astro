@@ -5,7 +5,7 @@ import ProjectTile from '../components/ProjectTile.astro';
 import { profile, projects, skills, timeline } from '../data/profile';
 ---
 <Base
-  title={`${profile.name} — Business & Data Analyst`}
+  title={`${profile.name} | Business and Data Analyst`}
   description="Harsh Wangikar, Business and Data Analyst. Master of Business Analytics, UTS Sydney. Projects in machine learning, dashboards and business analysis."
 >
   <nav class="nav" aria-label="Main">
@@ -56,7 +56,7 @@ import { profile, projects, skills, timeline } from '../data/profile';
             <div class="tl-item">
               <span class="when">{t.when}</span>
               <div>
-                <h4>{t.title}</h4>
+                <h4>{t.title}{t.country && <span class="country">{t.country}</span>}</h4>
                 <p class="org">{t.org}</p>
                 {t.note && <p class="note">{t.note}</p>}
               </div>
